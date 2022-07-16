@@ -60,7 +60,7 @@ class User {
   * сохранить пользователя через метод
   * User.setCurrent.
   * */
-  static login(data, callback) {
+  static login(data,callback) {
     createRequest({
       url: this.URL + '/login',
       method: 'POST',
@@ -69,8 +69,9 @@ class User {
       callback: (err, response) => {
         if (response && response.user) {
           this.setCurrent(response.user);
+          App.setState('user-logged');
         }
-        callback(err, response);
+        //callback(err, response);
       }
     });
   }
@@ -83,17 +84,18 @@ class User {
   * */
   static register(data, callback) {
     createRequest({
-      url: this.URL + '/current',
+      url: this.URL + '/register',
       method: 'POST',
       responseType: 'json',
       data,
       callback: (err, response) => {
-        if (response && response.user) {
+         if (response && response.user) {
           this.setCurrent(response.user);
+          App.setState('user-logged');
         }
-        callback(err, response);
-      }
-    });
+        //callback(err, response);        
+      }      
+    });          
   }
   
   /**
@@ -108,8 +110,9 @@ class User {
       callback(err, response) {
         if (response && response.success) {
           User.unsetCurrent();
+          App.setState('init');
         }
-        callback(err, response);
+        //callback(err, response);
       }      
     })
   }

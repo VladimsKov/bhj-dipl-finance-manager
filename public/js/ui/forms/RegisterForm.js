@@ -11,10 +11,11 @@ class RegisterForm extends AsyncForm {
 	* */
 	onSubmit(data) {
 		User.register(data, callback);
-		if (response.success) {
+		/*
+		if (callback.success) {
 			App.setState('user-logged');
 		}
-		const registerModal = document.querySelector("#modal-register");
-		registerModal.close();
+		*/		
+		App.modals.register.close();
 	}	
 }

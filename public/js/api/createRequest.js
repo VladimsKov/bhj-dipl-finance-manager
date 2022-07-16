@@ -7,17 +7,16 @@ const createRequest = (options = {}) => {
     let url = options.url;
     let requestData;
     xhr.responseType = options.responseType;
-    
-    if (options.method != 'GET') {
-        const formData = new FormData();
-        Object.entries(options.data).forEach(([key, value]) => formData.append(key, value));
-        requestData = formData;
-    } else {
-        if (options.data) {
-            url = getUrlString(options.url, options.data);
-            console.log(url);  
-        }             
-        
+    if (options.data) {
+        if (options.method != 'GET') {
+            const formData = new FormData();
+            Object.entries(options.data).forEach(([key, value]) => formData.append(key, value));
+            requestData = formData;
+        } else {
+             url = getUrlString(options.url, options.data);
+             requestData = options.data;
+            //console.log(url);            
+        }
     }
     
     xhr.addEventListener('load', function() {
@@ -29,7 +28,11 @@ const createRequest = (options = {}) => {
     });
     try {
         xhr.open(options.method, url);
-        xhr.send(requestData);
+        if (options.data) {
+            xhr.send(requestData);
+        } else {
+            xhr.send();
+        }
     } 
     catch (e) {
         // перехват сетевой ошибки

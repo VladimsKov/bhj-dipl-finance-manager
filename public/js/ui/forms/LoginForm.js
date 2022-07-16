@@ -11,10 +11,11 @@ class LoginForm extends AsyncForm {
 	* */
 	onSubmit(data) {
 		User.login(data, callback);
-		if (response.success) {
+		/*
+		if (callback.success) {
 			App.setState('user-logged');
 		}
-		const loginModal = document.querySelector("#modal-login");
-		loginModal.close();
+		*/		
+		App.modals.login.close();
 	}
 }
