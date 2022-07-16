@@ -29,8 +29,7 @@ class AsyncForm {
     
     this.element.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      this.submit(e.currentTarget);
+      this.submit()
     })    
   }
   
@@ -45,14 +44,11 @@ class AsyncForm {
     const formData = new FormData(this.element);
     const data = {};
     for(let [name, value] of formData) {
-      //console.log(`data to insert: ${name} : ${value}`);
-      data[name] = value;
-      //console.log(`$inserted in obj data: ${data[name]}`);
-    }
-    //console.log(`In getData() res:\n ${data.name}`);
+      data[name] = value;      
+    }    
     return data;   
   }
-  
+    
   onSubmit(options){
     
   }
@@ -61,18 +57,9 @@ class AsyncForm {
   * Вызывает метод onSubmit и передаёт туда
   * данные, полученные из метода getData()
   * */
-  submit(form) {
+  
+  submit() {
     const data = this.getData();
-    console.log(`returned data in AsyncForm.js, submit(): ${data.email}`);
-    console.log(form);
-    switch(form.id) {
-      case 'register-form': {
-        App.forms.register.onSubmit(data);
-      }
-      break;
-      case 'login-form': {
-        App.forms.login.onSubmit(data);
-      }
-    }    
+    this.onSubmit(data);       
   }
 }

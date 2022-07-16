@@ -23,6 +23,12 @@
       "email": "ivan@demo.ru",
       "password": "demo",
       "id": "8yundb1wwl5o2pdtm"
+    },
+    {
+      "name": "Boris",
+      "email": "boris@demo.ru",
+      "password": "demo",
+      "id": "8yundbekol5ofg40d"
     }
   ],
   "accounts": [
