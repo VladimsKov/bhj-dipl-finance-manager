@@ -5,7 +5,7 @@
 const createRequest = (options = {}) => {
     const xhr = new XMLHttpRequest();
     let url = options.url;
-    let requestData;
+    let requestData = options.data;
     xhr.responseType = options.responseType;
     if (options.data) {
         if (options.method != 'GET') {
@@ -13,9 +13,7 @@ const createRequest = (options = {}) => {
             Object.entries(options.data).forEach(([key, value]) => formData.append(key, value));
             requestData = formData;
         } else {
-             url = getUrlString(options.url, options.data);
-             requestData = options.data;
-            //console.log(url);            
+            url = getUrlString(options.url, options.data);                     
         }
     }
     
@@ -29,13 +27,15 @@ const createRequest = (options = {}) => {
     try {
         xhr.open(options.method, url);
         if (options.data) {
+            //console.log(`url is sent: ${url}`);
+            //console.log(`Data for url is sent: ${options.data}`);
             xhr.send(requestData);
         } else {
             xhr.send();
         }
     } 
     catch (e) {
-        // перехват сетевой ошибки
+        
         options.callback(e);
     }
 };
@@ -45,7 +45,7 @@ function getUrlString(url, data) {
     url += '?' + urlData[0][0] + '=' + encodeURIComponent(urlData[0][1]);
     for (let i = 1; i < urlData.length; i++) {
         url += '@' + urlData[i][0] + '=' + encodeURIComponent(urlData[i][1]);
-    }
+    }    
     return url;
 }
 

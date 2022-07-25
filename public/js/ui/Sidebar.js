@@ -47,12 +47,7 @@ class Sidebar {
 		});
 		const logoutButton = document.querySelector('.menu-item_logout');
 		logoutButton.addEventListener('click', () => {
-			User.logout(callback);
-			/*			
-			if (callback.success) {
-				App.setState('init');
-			}
-			*/
+			User.logout(callback);			
 		})
 	}
 }

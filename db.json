@@ -29,6 +29,18 @@
       "email": "boris@demo.ru",
       "password": "demo",
       "id": "8yundbekol5ofg40d"
+    },
+    {
+      "name": "Serg",
+      "email": "serg@demo",
+      "password": "demo",
+      "id": "8yundb664l5vyjzao"
+    },
+    {
+      "name": "Vlad",
+      "email": "vlad@demo",
+      "password": "demo",
+      "id": "8yundb3rkl5vz34c4"
     }
   ],
   "accounts": [
@@ -46,6 +58,46 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Sber",
+      "user_id": "8yundb8m8l5o1et5y",
+      "id": "8yundbc20l5vj348l"
+    },
+    {
+      "name": "Alfa",
+      "user_id": "8yundb8m8l5o1et5y",
+      "id": "8yundbdnsl5vj3gx8"
+    },
+    {
+      "name": "green",
+      "user_id": "8yundb664l5vyjzao",
+      "id": "8yundb2c8l5vynxb6"
+    },
+    {
+      "name": "alfa",
+      "user_id": "8yundb664l5vyjzao",
+      "id": "8yundb67ol5vyq61z"
+    },
+    {
+      "name": "tinkoff",
+      "user_id": "8yundb3rkl5vz34c4",
+      "id": "8yundb9iwl5vz4mz3"
+    },
+    {
+      "name": "vtb",
+      "user_id": "8yundb3rkl5vz34c4",
+      "id": "8yundb24l5vz5l9a"
+    },
+    {
+      "name": "sber",
+      "user_id": "8yundb664l5vyjzao",
+      "id": "8yundb6msl5zhm5ee"
+    },
+    {
+      "name": "trust",
+      "user_id": "8yundb3rkl5vz34c4",
+      "id": "8yundb8eol5zhr4fb"
     }
   ],
   "transactions": [
@@ -183,6 +235,78 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "8yundb818l5zm1r95",
+      "type": "income",
+      "name": "ЗП",
+      "sum": 100,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-24T17:45:07.384Z"
+    },
+    {
+      "id": "8yundb4sol5zm2dvh",
+      "type": "income",
+      "name": "Дивиденды",
+      "sum": 40,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-24T17:45:36.700Z"
+    },
+    {
+      "id": "8yundbwgl5zm9wqs",
+      "type": "expense",
+      "name": "ЗП",
+      "sum": 50,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-24T17:51:27.747Z"
+    },
+    {
+      "id": "8yundbemol5zpbdst",
+      "type": "income",
+      "name": "ЗП",
+      "sum": 20,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-24T19:16:35.356Z"
+    },
+    {
+      "id": "8yundb5lgl6059bwx",
+      "type": "expense",
+      "name": "страховка кв",
+      "sum": 30,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-25T02:42:53.457Z"
+    },
+    {
+      "id": "8yundbbgkl60b6wzv",
+      "type": "expense",
+      "name": "страховка кв",
+      "sum": 80,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-25T05:28:58.506Z"
+    },
+    {
+      "id": "8yundbegsl60b7381",
+      "type": "expense",
+      "name": "страховка кв",
+      "sum": 20,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-25T05:29:06.576Z"
+    },
+    {
+      "id": "8yundbdfwl60b7lc4",
+      "type": "income",
+      "name": "ЗП",
+      "sum": 50,
+      "account_id": "8yundb2c8l5vynxb6",
+      "user_id": "8yundb664l5vyjzao",
+      "created_at": "2022-07-25T05:29:30.051Z"
     }
   ]
 }

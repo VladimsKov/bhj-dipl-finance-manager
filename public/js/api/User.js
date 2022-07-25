@@ -21,8 +21,7 @@ class User {
   * Удаляет информацию об авторизованном
   * пользователе из локального хранилища.
   * */
-  static unsetCurrent() {
-    
+  static unsetCurrent() {    
     localStorage.removeItem('user');
   }
   
@@ -49,7 +48,7 @@ class User {
         if (response && response.user) {
           User.setCurrent(response.user);
         }
-        callback(err, response);
+        return callback(err, response);
       }      
     })
   }
@@ -71,7 +70,7 @@ class User {
           this.setCurrent(response.user);
           App.setState('user-logged');
         }
-        //callback(err, response);
+        return callback(err, response);
       }
     });
   }
@@ -89,11 +88,11 @@ class User {
       responseType: 'json',
       data,
       callback: (err, response) => {
-         if (response && response.user) {
+        if (response && response.user) {
           this.setCurrent(response.user);
           App.setState('user-logged');
         }
-        //callback(err, response);        
+        return callback(err, response);        
       }      
     });          
   }
@@ -111,8 +110,9 @@ class User {
         if (response && response.success) {
           User.unsetCurrent();
           App.setState('init');
+          
         }
-        //callback(err, response);
+        return callback(err, response);
       }      
     })
   }
