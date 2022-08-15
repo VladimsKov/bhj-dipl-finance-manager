@@ -110,7 +110,7 @@ class User {
         if (response && response.success) {
           User.unsetCurrent();
           App.setState('init');
-          
+          App.widgets.accounts.lastAccountID = '';          
         }
         return callback(err, response);
       }      

@@ -98,6 +98,26 @@
       "name": "trust",
       "user_id": "8yundb3rkl5vz34c4",
       "id": "8yundb8eol5zhr4fb"
+    },
+    {
+      "name": "tin",
+      "user_id": "8yundb5iol5mxcdu3",
+      "id": "8yundbca0l6oltgh7"
+    },
+    {
+      "name": "Sberb",
+      "user_id": "8yundb5iol5mxcdu3",
+      "id": "8yundb7cgl6olu9lv"
+    },
+    {
+      "name": "Cred",
+      "user_id": "8yundbekol5ofg40d",
+      "id": "8yundbhd4l6pxhuyx"
+    },
+    {
+      "name": "Depo",
+      "user_id": "8yundbekol5ofg40d",
+      "id": "8yundbdsgl6pypqw1"
     }
   ],
   "transactions": [
@@ -237,76 +257,49 @@
       "user_id": "1"
     },
     {
-      "id": "8yundb818l5zm1r95",
+      "id": "8yundbai4l6uabhwh",
       "type": "income",
-      "name": "ЗП",
+      "name": "продажа1",
       "sum": 100,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-24T17:45:07.384Z"
+      "account_id": "8yundbc20l5vj348l",
+      "user_id": "8yundb8m8l5o1et5y",
+      "created_at": "2022-08-15T04:57:37.888Z"
     },
     {
-      "id": "8yundb4sol5zm2dvh",
+      "id": "8yundb7ngl6v5kibs",
       "type": "income",
-      "name": "Дивиденды",
-      "sum": 40,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-24T17:45:36.700Z"
+      "name": "продажа1",
+      "sum": 150,
+      "account_id": "8yundbdnsl5vj3gx8",
+      "user_id": "8yundb8m8l5o1et5y",
+      "created_at": "2022-08-15T19:32:26.439Z"
     },
     {
-      "id": "8yundbwgl5zm9wqs",
+      "id": "8yundb9ggl6v5knmf",
+      "type": "income",
+      "name": "продажа2",
+      "sum": 150,
+      "account_id": "8yundbdnsl5vj3gx8",
+      "user_id": "8yundb8m8l5o1et5y",
+      "created_at": "2022-08-15T19:32:33.302Z"
+    },
+    {
+      "id": "8yundb4vcl6v8050d",
+      "type": "income",
+      "name": "продажа1",
+      "sum": 100,
+      "account_id": "8yundbhd4l6pxhuyx",
+      "user_id": "8yundbekol5ofg40d",
+      "created_at": "2022-08-15T20:40:34.908Z"
+    },
+    {
+      "id": "8yundb9akl6v80dbe",
       "type": "expense",
-      "name": "ЗП",
+      "name": "покупка 1",
       "sum": 50,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-24T17:51:27.747Z"
-    },
-    {
-      "id": "8yundbemol5zpbdst",
-      "type": "income",
-      "name": "ЗП",
-      "sum": 20,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-24T19:16:35.356Z"
-    },
-    {
-      "id": "8yundb5lgl6059bwx",
-      "type": "expense",
-      "name": "страховка кв",
-      "sum": 30,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-25T02:42:53.457Z"
-    },
-    {
-      "id": "8yundbbgkl60b6wzv",
-      "type": "expense",
-      "name": "страховка кв",
-      "sum": 80,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-25T05:28:58.506Z"
-    },
-    {
-      "id": "8yundbegsl60b7381",
-      "type": "expense",
-      "name": "страховка кв",
-      "sum": 20,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-25T05:29:06.576Z"
-    },
-    {
-      "id": "8yundbdfwl60b7lc4",
-      "type": "income",
-      "name": "ЗП",
-      "sum": 50,
-      "account_id": "8yundb2c8l5vynxb6",
-      "user_id": "8yundb664l5vyjzao",
-      "created_at": "2022-07-25T05:29:30.051Z"
+      "account_id": "8yundbhd4l6pxhuyx",
+      "user_id": "8yundbekol5ofg40d",
+      "created_at": "2022-08-15T20:40:45.673Z"
     }
   ]
 }

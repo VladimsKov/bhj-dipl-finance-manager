@@ -40,10 +40,9 @@ class AccountsWidget {
   
   registerAccountEvents() {
     const accounts = this.element.querySelectorAll('.account');
-    //console.log(accounts);
     accounts.forEach((elem) => {
       elem.addEventListener('click', () => {
-        //this.onSelectAccount(elem);
+        this.onSelectAccount(elem);
         
       })
     });
@@ -64,6 +63,7 @@ class AccountsWidget {
     if (currentUser) {
       const callback = (err, response) => {
         if (response.success) {
+          //const activeId = this.element.querySelector('.active').dataset.id;
           this.clear();
           this.renderItem(response.data);          
         }
@@ -97,8 +97,10 @@ class AccountsWidget {
     if (lastActiveElem) {
       lastActiveElem.classList.remove('active');
     }
-    element.classList.add('active');    
-    //App.showPage('transactions', {/*account_id: id_счёта*/});    
+    element.classList.add('active');
+    //запомнить id счета
+    this.lastAccountID = element.dataset.id;
+    App.showPage('transactions', {account_id: element.dataset.id});    
   }
   
   /**
@@ -108,7 +110,7 @@ class AccountsWidget {
   * */
   getAccountHTML (item) {    
     
-    return `<li class="account"><a href="#"><span>${item.name}</span>
+    return `<li class="account" data-id="${item.id}"><a href="#"><span>${item.name}</span>
     / <span>${item.sum} ₽</span></a></li>`     
   }
   

@@ -33,6 +33,7 @@ class Entity {
       callback: (err, response) => {
         if (response.success) {
           App.update();
+          //App.pages.transactions.clear();
         }
         callback(err, response);
       }
