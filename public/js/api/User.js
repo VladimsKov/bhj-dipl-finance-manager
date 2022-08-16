@@ -111,8 +111,6 @@ class User {
           User.unsetCurrent();
           App.setState('init');
           App.widgets.accounts.lastAccountID = '';
-          console.log(`last.Options value`);
-          console.log(App.pages.transactions.lastOptions);
           App.pages.transactions.lastOptions = '';          
         }
         return callback(err, response);

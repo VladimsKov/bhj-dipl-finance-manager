@@ -27,15 +27,12 @@ const createRequest = (options = {}) => {
     try {
         xhr.open(options.method, url);
         if (options.data) {
-            //console.log(`url is sent: ${url}`);
-            //console.log(`Data for url is sent: ${options.data}`);
             xhr.send(requestData);
         } else {
             xhr.send();
         }
     } 
-    catch (e) {
-        
+    catch (e) {        
         options.callback(e);
     }
 };

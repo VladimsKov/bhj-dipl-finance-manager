@@ -41,6 +41,12 @@
       "email": "vlad@demo",
       "password": "demo",
       "id": "8yundb3rkl5vz34c4"
+    },
+    {
+      "name": "Макс",
+      "email": "max@demo.ru",
+      "password": "demo",
+      "id": "8yundb20cl6wm5zcr"
     }
   ],
   "accounts": [
@@ -63,11 +69,6 @@
       "name": "Sber",
       "user_id": "8yundb8m8l5o1et5y",
       "id": "8yundbc20l5vj348l"
-    },
-    {
-      "name": "Alfa",
-      "user_id": "8yundb8m8l5o1et5y",
-      "id": "8yundbdnsl5vj3gx8"
     },
     {
       "name": "green",
@@ -118,6 +119,21 @@
       "name": "Depo",
       "user_id": "8yundbekol5ofg40d",
       "id": "8yundbdsgl6pypqw1"
+    },
+    {
+      "name": "VTB",
+      "user_id": "8yundb8m8l5o1et5y",
+      "id": "8yundbaigl6wm0uio"
+    },
+    {
+      "name": "VTB2",
+      "user_id": "8yundb8m8l5o1et5y",
+      "id": "8yundbawwl6wm16y8"
+    },
+    {
+      "name": "Счет1",
+      "user_id": "8yundb20cl6wm5zcr",
+      "id": "8yundb82ol6wm71d6"
     }
   ],
   "transactions": [
@@ -302,15 +318,6 @@
       "created_at": "2022-08-15T21:05:05.430Z"
     },
     {
-      "id": "8yundb4g4l6v8w0rm",
-      "type": "expense",
-      "name": "покупка2",
-      "sum": 20,
-      "account_id": "8yundbc20l5vj348l",
-      "user_id": "8yundb8m8l5o1et5y",
-      "created_at": "2022-08-15T21:05:22.401Z"
-    },
-    {
       "id": "8yundbbd0l6vo72ru",
       "type": "income",
       "name": "продажа1",
@@ -327,6 +334,42 @@
       "account_id": "8yundbhd4l6pxhuyx",
       "user_id": "8yundbekol5ofg40d",
       "created_at": "2022-08-16T05:35:43.808Z"
+    },
+    {
+      "id": "8yundb1rgl6wlfhw1",
+      "type": "income",
+      "name": "продажа2",
+      "sum": 80,
+      "account_id": "8yundbhd4l6pxhuyx",
+      "user_id": "8yundbekol5ofg40d",
+      "created_at": "2022-08-16T19:44:12.624Z"
+    },
+    {
+      "id": "8yundb5a8l6wlfx0c",
+      "type": "income",
+      "name": "продажа3",
+      "sum": 100,
+      "account_id": "8yundbhd4l6pxhuyx",
+      "user_id": "8yundbekol5ofg40d",
+      "created_at": "2022-08-16T19:44:32.219Z"
+    },
+    {
+      "id": "8yundbb0cl6wm7eke",
+      "type": "income",
+      "name": "продажа1",
+      "sum": 20,
+      "account_id": "8yundb82ol6wm71d6",
+      "user_id": "8yundb20cl6wm5zcr",
+      "created_at": "2022-08-16T20:05:54.685Z"
+    },
+    {
+      "id": "8yundb8w8l6wm7pa6",
+      "type": "expense",
+      "name": "покупка1",
+      "sum": 5,
+      "account_id": "8yundb82ol6wm71d6",
+      "user_id": "8yundb20cl6wm5zcr",
+      "created_at": "2022-08-16T20:06:08.573Z"
     }
   ]
 }

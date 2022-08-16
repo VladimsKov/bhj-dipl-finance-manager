@@ -46,8 +46,7 @@ class TransactionsPage {
       elem.addEventListener('click', () => {
         this.removeTransaction(elem.dataset.id)});
       })     
-    }
-    
+    }    
     
     /**
     * Удаляет счёт. Необходимо показать диаголовое окно (с помощью confirm())
@@ -88,9 +87,6 @@ class TransactionsPage {
       const request = confirm('Вы действительно хотите удалить эту транзакцию?');
       if (request) {        
         const callback = (err, response) => {
-          console.log(`id удаляемой транзакции ${id}`);
-          console.log('ответ сервера при удалении транзакции:');
-          console.log(response);
           if (response.success) {            
             App.update();           
           }
@@ -110,15 +106,13 @@ class TransactionsPage {
         this.lastOptions = options;
         const callback = (err, response) => {
           if (response.success) {
-            console.log('ответ сервера после запроса стр. транзакций:')
-            console.log(response);
             //вывод названия счета
             let accountElem, accountName;
-            if (response.data.length) { //по счету есть транзакции
+            if (response.data.length) {//id от сервера, если есть транзакции 
               const accountID = response.data[0].account_id;         
               accountElem = App.widgets.accounts.element
               .querySelector(`[data-id="${accountID}"]`);                                         
-            } else { //название счета из сохраненного свойства
+            } else { //id счета из сохраненного ранее свойства
               accountElem = App.widgets.accounts.element
               .querySelector(`[data-id="${App.widgets.accounts.lastAccountID}"]`);              
             }
@@ -130,8 +124,7 @@ class TransactionsPage {
           }
         }
         this.clear();        
-        Transaction.list(options, callback);
-        
+        Transaction.list(options, callback);        
       };        
     }
     
@@ -162,8 +155,37 @@ class TransactionsPage {
     * Форматирует дату в формате 2019-03-10 03:20:41 (строка)
     * в формат «10 марта 2019 г. в 03:20»
     * */
-    formatDate(date){
-      
+    formatDate(date) {
+      const year = date.slice(0, 4);
+      const day = date.slice(8, 10);
+      const time = date.slice(11, 16);
+      let month = date.slice(5, 7);
+      switch (month) {
+        case '01': month = 'января';
+        break;
+        case '02': month = 'февраля';
+        break;
+        case '03': month = 'марта';
+        break;
+        case '04': month = 'апреля';
+        break;
+        case '05': month = 'мая';
+        break;
+        case '06': month = 'июня';
+        break;
+        case '07': month = 'июля';
+        break;
+        case '08': month = 'августа';
+        break;
+        case '09': month = 'сентября';
+        break;
+        case '10': month = 'октября';
+        break;
+        case '11': month = 'ноября';
+        break;
+        case '12': month = 'декабря';
+      }
+      return day + ' ' + month + ' ' + year + ' ' + 'г.' + ' ' + 'в' + ' ' + time; 
     }
     
     /**
@@ -171,6 +193,7 @@ class TransactionsPage {
     * item - объект с информацией о транзакции
     * */
     getTransactionHTML(item){
+      const date = this.formatDate(item.created_at);
       let itemType = 'income';
       if (item.type != 'income') {
         itemType = 'expense';
@@ -183,7 +206,7 @@ class TransactionsPage {
       <div class="transaction__info">
       <h4 class="transaction__title">${item.name}</h4>
       <!-- дата -->
-      <div class="transaction__date">${item.created_at}</div>
+      <div class="transaction__date">${date}</div>
       </div>
       </div>
       <div class="col-md-3">

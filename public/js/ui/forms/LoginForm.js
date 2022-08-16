@@ -11,11 +11,6 @@ class LoginForm extends AsyncForm {
 	* */
 	onSubmit(data) {
 		User.login(data, callback);
-		/*
-		if (callback.success) {
-			App.setState('user-logged');
-		}
-		*/		
 		App.modals.login.close();
 	}
 }

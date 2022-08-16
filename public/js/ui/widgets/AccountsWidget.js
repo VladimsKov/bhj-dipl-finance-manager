@@ -63,11 +63,9 @@ class AccountsWidget {
     if (currentUser) {
       const callback = (err, response) => {
         if (response.success) {
-          //const activeId = this.element.querySelector('.active').dataset.id;
           this.clear();
           this.renderItem(response.data);          
         }
-        //
       }      
       Account.list({id: currentUser.id}, callback);
     }
@@ -98,8 +96,7 @@ class AccountsWidget {
       lastActiveElem.classList.remove('active');
     }
     element.classList.add('active');
-    //запомнить id счета
-    this.lastAccountID = element.dataset.id;
+    this.lastAccountID = element.dataset.id; //запомнить id счета
     App.showPage('transactions', {account_id: element.dataset.id});    
   }
   
