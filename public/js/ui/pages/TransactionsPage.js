@@ -23,8 +23,11 @@ class TransactionsPage {
   * Вызывает метод render для отрисовки страницы
   * */
   update() {
-    this.render(this.element.lastOptions);    
+    if (this.lastOptions) {
+      this.render(this.lastOptions);    
+    }
   }
+  
   
   /**
   * Отслеживает нажатие на кнопку удаления транзакции
@@ -56,9 +59,9 @@ class TransactionsPage {
     * для обновления приложения
     * */
     removeAccount() {
-      if (this.element.lastOptions) {
+      if (this.lastOptions) {
         console.log('last options:');
-        console.log(this.element.lastOptions);
+        console.log(this.lastOptions);
         const request = confirm('Вы действительно хотите удалить счёт?');
         if (request) {
           const callback = (err, response) => {
@@ -102,12 +105,12 @@ class TransactionsPage {
     * Получает список Transaction.list и полученные данные передаёт
     * в TransactionsPage.renderTransactions()
     * */
-    render(options){
+    render(options) {
       if (options) {
-        this.element.lastOptions = options;
+        this.lastOptions = options;
         const callback = (err, response) => {
           if (response.success) {
-            console.log('ответ сервера после удал/добавл. транзакции:')
+            console.log('ответ сервера после запроса стр. транзакций:')
             console.log(response);
             //вывод названия счета
             let accountElem, accountName;
@@ -123,13 +126,10 @@ class TransactionsPage {
               accountName = accountElem.querySelector('a').firstElementChild.innerText;
               this.renderTitle(accountName);
             }              
-            //список счетов
             this.renderTransactions(response.data);          
           }
         }
-        //Account.get(options, callback);
-        this.clear();
-        
+        this.clear();        
         Transaction.list(options, callback);
         
       };        

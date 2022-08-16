@@ -266,24 +266,6 @@
       "created_at": "2022-08-15T04:57:37.888Z"
     },
     {
-      "id": "8yundb7ngl6v5kibs",
-      "type": "income",
-      "name": "продажа1",
-      "sum": 150,
-      "account_id": "8yundbdnsl5vj3gx8",
-      "user_id": "8yundb8m8l5o1et5y",
-      "created_at": "2022-08-15T19:32:26.439Z"
-    },
-    {
-      "id": "8yundb9ggl6v5knmf",
-      "type": "income",
-      "name": "продажа2",
-      "sum": 150,
-      "account_id": "8yundbdnsl5vj3gx8",
-      "user_id": "8yundb8m8l5o1et5y",
-      "created_at": "2022-08-15T19:32:33.302Z"
-    },
-    {
       "id": "8yundb4vcl6v8050d",
       "type": "income",
       "name": "продажа1",
@@ -300,6 +282,51 @@
       "account_id": "8yundbhd4l6pxhuyx",
       "user_id": "8yundbekol5ofg40d",
       "created_at": "2022-08-15T20:40:45.673Z"
+    },
+    {
+      "id": "8yundb5kkl6v8vfj3",
+      "type": "income",
+      "name": "продажа 3",
+      "sum": 60,
+      "account_id": "8yundbc20l5vj348l",
+      "user_id": "8yundb8m8l5o1et5y",
+      "created_at": "2022-08-15T21:04:54.878Z"
+    },
+    {
+      "id": "8yundb7g8l6v8vno7",
+      "type": "expense",
+      "name": "покупка1",
+      "sum": 20,
+      "account_id": "8yundbc20l5vj348l",
+      "user_id": "8yundb8m8l5o1et5y",
+      "created_at": "2022-08-15T21:05:05.430Z"
+    },
+    {
+      "id": "8yundb4g4l6v8w0rm",
+      "type": "expense",
+      "name": "покупка2",
+      "sum": 20,
+      "account_id": "8yundbc20l5vj348l",
+      "user_id": "8yundb8m8l5o1et5y",
+      "created_at": "2022-08-15T21:05:22.401Z"
+    },
+    {
+      "id": "8yundbbd0l6vo72ru",
+      "type": "income",
+      "name": "продажа1",
+      "sum": 150,
+      "account_id": "8yundbdsgl6pypqw1",
+      "user_id": "8yundbekol5ofg40d",
+      "created_at": "2022-08-16T04:13:52.457Z"
+    },
+    {
+      "id": "8yundb6b4l6vr4ce9",
+      "type": "expense",
+      "name": "покупка2",
+      "sum": 15,
+      "account_id": "8yundbhd4l6pxhuyx",
+      "user_id": "8yundbekol5ofg40d",
+      "created_at": "2022-08-16T05:35:43.808Z"
     }
   ]
 }
